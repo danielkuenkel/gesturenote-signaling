@@ -5,12 +5,6 @@ var yetify = require('yetify'),
     sockets = require('./sockets'),
     port = parseInt(process.env.PORT || config.server.port, 10),
     server_handler = function (req, res) {
-        if (req.url === '/healthcheck') {
-            console.log(Date.now(), 'healthcheck');
-            res.writeHead(200);
-            res.end();
-            return;
-        }
         res.writeHead(404);
         res.end();
     },
