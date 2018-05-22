@@ -1,12 +1,7 @@
 {
-  "isDev": false,
+  "isDev": true,
   "server": {
-    "port": 8888,
-    "/* secure */": "/* whether this connects via https */",
-    "secure": true,
-    "key": "config/sslcerts/key.pem",
-    "cert": "config/sslcerts/cert.pem",
-    "password": "window2018"
+    "port": 8888
   },
   "rooms": {
     "/* maxClients */": "/* maximum number of clients per room. 0 = no limit */",
@@ -14,14 +9,8 @@
   },
   "stunservers": [
     {
-      "urls": "stun:127.0.0.2:3478"
+      "urls": "$STUNSERVER_URL"
     }
   ],
-  "turnservers": [
-    {
-      "urls": ["turn:your.turn.servers.here"],
-      "secret": "turnserversharedsecret",
-      "expiry": 86400
-    }
-  ]
+  "turnservers": []
 }
