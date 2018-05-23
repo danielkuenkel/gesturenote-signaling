@@ -32,4 +32,4 @@ if (config.server.secure) {
 } else {
     httpUrl = "http://localhost:" + port;
 }
-console.log(yetify.logo() + ' -- signal master is running at: ' + httpUrl);
+console.log(yetify.logo() + ' -- signal master is running at: ' + httpUrl + ' at port: ' + port + ', and is secure: ' + config.server.secure);
